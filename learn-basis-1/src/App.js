@@ -1,4 +1,7 @@
-const count = 100
+import { useState } from "react";
+import './index.css'
+
+const count1 = 100
 
 const list = [
   { id: 1, name: "张三" },
@@ -30,7 +33,39 @@ const handleClick = (e) => {
   console.log('按钮被点击了', e);
 }
 
+// 组件
+
+function Button() {
+  return <button>组件按钮</button>
+}
+// const Button = () => {
+//   return <Button>组件按钮</Button>
+// }
+
+  // 样式
+  const style = {
+    color:'blue',
+    fontSize:'30px'
+  }
+
 function App() {
+
+      const [count, setCount] = useState(0)
+
+const addCount = () => {
+  setCount(count + 1)
+}
+
+  // 修改状态的规则
+  const [name, setName] = useState({ nickname: 'tyh'})
+
+  const changeName = () => {
+    setName({
+      ...name,
+      nickname: 'tttt'
+    })
+  }
+
   return (
     <div className="App">
       <h1>Learn Basis 1</h1>
@@ -40,7 +75,7 @@ function App() {
       {'hello world'}
 
       {/* 识别js变量 */}
-      {count}
+      {count1}
 
       {/* js函数调用 */}
       {getNickname()}
@@ -64,6 +99,23 @@ function App() {
 
       {/* 事件绑定 */}
       <button onClick={(e) => handleClick(e, 'MarvelousTangyuan')}>点我</button>
+
+    {/* 组件调用 成对标签 */}
+      <Button></Button>
+
+      {/* 组件调用 自闭合标签 */}
+      <Button />
+
+    <button onClick={addCount}>{count}</button>
+
+    <button onClick={changeName}>修改name:{name.nickname}</button>
+
+    <span style={{color:'red', fontSize:'50px'}}>this is a span</span>
+
+    <span style={style}>this is another span</span>
+
+    <h2 className="h2">this is a h2</h2>
+
     </div>
   );
 }

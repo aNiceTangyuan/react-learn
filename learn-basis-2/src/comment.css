@@ -1,0 +1,203 @@
+/* 整体容器 */
+.app {
+  width: 800px;
+  margin: 40px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color: #18191c;
+}
+
+/* 顶部“评论”标题 */
+.reply-navigation {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* 评论区包裹 */
+.reply-wrap {
+  background: #fff;
+}
+
+/* 评论列表 */
+.reply-list {
+  border-top: 1px solid #e3e5e7;
+}
+
+/* 单条评论 */
+.reply-item {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #e3e5e7;
+}
+
+/* 左侧头像 */
+.root-reply-avatar {
+  margin-right: 16px;
+}
+
+.bili-avatar {
+  width: 48px;
+  height: 48px;
+}
+
+.bili-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 右侧内容区 */
+.content-wrap {
+  flex: 1;
+}
+
+/* 用户名 */
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #61666d;
+  margin-bottom: 6px;
+}
+
+/* 评论内容 */
+.reply-content {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #18191c;
+  margin-bottom: 10px;
+}
+
+/* 底部操作区 */
+.reply-footer {
+  font-size: 13px;
+  color: #9499a0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 点赞 */
+.reply-like {
+  cursor: pointer;
+}
+
+.reply-like:hover {
+  color: #00aeec;
+}
+
+/* 回复 */
+.reply-reply {
+  cursor: pointer;
+}
+
+.reply-reply:hover {
+  color: #00aeec;
+}
+/* ===== 评论区头部 ===== */
+.reply-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* 评论标题 */
+.reply-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #18191c;
+}
+
+/* 分类 Tab 容器 */
+.reply-tabs {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+}
+
+/* 单个 Tab */
+.reply-tab {
+  color: #9499a0;
+  cursor: default;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* 当前选中（写死） */
+.reply-tab.active {
+  color: #18191c;
+  font-weight: 500;
+}
+
+/* 底部小蓝线（B站味道） */
+.reply-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: #00aeec;
+  border-radius: 2px;
+}
+/* ===== 发表评论区域 ===== */
+.reply-editor {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e3e5e7;
+}
+
+.editor-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.editor-main {
+  flex: 1;
+}
+
+.editor-textarea {
+  width: 100%;
+  resize: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #e3e5e7;
+  outline: none;
+  background: #f6f7f8;
+}
+
+.editor-textarea:focus {
+  border-color: #00aeec;
+  background: #fff;
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.editor-tip {
+  font-size: 12px;
+  color: #9499a0;
+}
+
+.editor-submit {
+  padding: 6px 16px;
+  font-size: 14px;
+  color: #fff;
+  background: #00aeec;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editor-submit:hover {
+  background: #0096d1;
+}
